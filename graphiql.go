@@ -66,7 +66,7 @@ func renderGraphiQL(w http.ResponseWriter, params graphql.Params) {
 }
 
 // graphiqlVersion is the current version of GraphiQL
-const graphiqlVersion = "0.11.11"
+const graphiqlVersion = "0.17.0"
 
 // tmpl is the page template to render GraphiQL
 const graphiqlTemplate = `
@@ -100,8 +100,8 @@ add "&raw" to the end of the URL within a browser.
   <link href="//cdn.jsdelivr.net/npm/graphiql@{{ .GraphiqlVersion }}/graphiql.css" rel="stylesheet" />
   <script src="//cdn.jsdelivr.net/es6-promise/4.0.5/es6-promise.auto.min.js"></script>
   <script src="//cdn.jsdelivr.net/fetch/0.9.0/fetch.min.js"></script>
-  <script src="//cdn.jsdelivr.net/react/15.4.2/react.min.js"></script>
-  <script src="//cdn.jsdelivr.net/react/15.4.2/react-dom.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/graphiql@{{ .GraphiqlVersion }}/graphiql.min.js"></script>
 </head>
 <body>
